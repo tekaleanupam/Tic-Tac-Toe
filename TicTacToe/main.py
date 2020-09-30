@@ -64,14 +64,14 @@ def check_for_victory():
         (board[0][2].text == name and board[1][1].text == name and board[2][0].text == name))   # diagonal \
 
     if won:
-        print('winner is:', name)
+        print('The Winner is:', name)
         destroy(cursor)
         mouse.visible = True
         Panel(z=1, scale=10, model='quad')
         t = Text('player\n'+name+'\nwon!', scale=3,
                  origin=(0, 0), background=True)
         t.create_background(padding=(.5, .25), radius=Text.size/2)
-        t.background.color = player_color.tint(-.2)
+        t.background.color = player_color.blue(-.2)
 
 
 app.run()
